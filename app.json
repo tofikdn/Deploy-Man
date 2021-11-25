@@ -51,7 +51,7 @@
     },
     "ALIVE_NAME": {
       "description": "Masukan Nama untuk menunjukan pesan di perintah .alive / .afk / .ping dan lain lain",
-      "required": true
+      "required": false
     }
   },
   "addons": [
