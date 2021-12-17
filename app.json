@@ -1,9 +1,15 @@
 {
   "name": "Man-Userbot",
   "description": "[Man-Userbot] userbot Telegram modular yang berjalan pada Python 3.8+",
-  "logo": "https://telegra.ph/file/9dc4e335feaaf6a214818.jpg",
-  "keywords": ["telegram", "userbot", "man-userbot", "modular", "python"],
+  "keywords": [
+    "telegram",
+    "userbot",
+    "man-userbot",
+    "modular",
+    "python"
+  ],
   "repository": "https://github.com/tofikdn/Deploy-Man",
+  "logo": "https://telegra.ph/file/9dc4e335feaaf6a214818.jpg",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -45,9 +51,16 @@
       "required": false
     }
   },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "image": "heroku/python",
   "addons": [
     {
-    "plan": "heroku-postgresql",
+      "plan": "heroku-postgresql",
       "options": {
         "version": "12"
       }
@@ -55,16 +68,7 @@
   ],
   "buildpacks": [
     {
-      "url": "heroku/python"
-    },
-    {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
     }
-  ],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  }
+  ]
 }
